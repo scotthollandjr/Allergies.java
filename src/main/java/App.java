@@ -21,6 +21,14 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/results.vtl");
 
+      String givenScore = request.queryParams("userInput");
+      Integer score = Integer.parseInt(givenScore);
+
+      Allergies newScore = new Allergies();
+      ArrayList<String> resultsArray = newScore.runAllergies(score);
+
+      model.put("givenScore", givenScore);
+      model.put("resultsArray", resultsArray);
 
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+}
+
+.allergen {
+  background-color: #D0FAEE;
+  margin: 5px;
+  border: 1px solid #bef8e8;
+}
+
+.allergic {
+  background-color: #ffb2b2;
+  border: 1px solid #ffa5a5;
+}
